@@ -20,6 +20,7 @@ dists      = [20 + 2*i for i in range(source_pos)]
 z_source   = [z_receiver + d for d in dists]
 
 path       = "results/seismogramms/"
+img_path   = "images/"
 
 def read_seismogramm(seismo, anomaly):
     """
@@ -122,12 +123,12 @@ if __name__ == '__main__':
                 geol_image[x][y] = -30
 
     plt.imshow(cv.resize(seismo_anomaly.T, (576, 1000)), cmap='gray')
-    plt.savefig('anomaly_img.jpg')
+    plt.savefig(os.path.join(img_path, 'anomaly_img.jpg'))
 
     plt.imshow(cv.resize(seismo_without.T, (576, 1000)), cmap='gray')
-    plt.savefig('without_img.jpg')
+    plt.savefig(os.path.join(img_path, 'without_img.jpg'))
 
     plt.imshow(cv.resize(geol_image.T, (z_size, y_size)), cmap='gray')
     plt.axvline(x=150,color='red', linestyle='dashed', alpha=0.7)
     plt.axvline(x=160,color='red', linestyle='dashed', alpha=0.7)
-    plt.savefig('final_img.jpg')
+    plt.savefig(os.path.join(img_path,'imagesfinal_img.jpg'))
