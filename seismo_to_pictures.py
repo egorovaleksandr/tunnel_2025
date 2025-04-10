@@ -131,4 +131,4 @@ if __name__ == '__main__':
     plt.imshow(cv.resize(geol_image.T, (z_size, y_size)), cmap='gray')
     plt.axvline(x=150,color='red', linestyle='dashed', alpha=0.7)
     plt.axvline(x=160,color='red', linestyle='dashed', alpha=0.7)
-    plt.savefig(os.path.join(img_path,'imagesfinal_img.jpg'))
+    plt.savefig(os.path.join(img_path,'final_img.jpg'))
