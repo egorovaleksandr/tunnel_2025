@@ -1,0 +1,11 @@
+# vtk DataFile Version 3.0
+Created by savePoints.
+ASCII
+DATASET UNSTRUCTURED_GRID
+POINTS 1 float
+0 -8 69.5
+CELLS 1 2
+1 0
+CELL_TYPES 1
+1
+POINT_DATA 1
